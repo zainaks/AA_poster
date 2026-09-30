@@ -1,0 +1,233 @@
+p, li, td, summary { font-family: 'Instrument Sans', arial, serif; }
+h1, h2, h3, h4 { font-family: 'Bricolage Grotesque', arial, serif; }
+
+/* Box sizing reset to keep padding inside width calculations */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.moving-gradient-bg {
+  /* 1. Define your multi-color gradient */
+  background: linear-gradient(-45deg, #ffe8c8, #fff2fe, #fff3ea, #eadcf2);
+  
+  /* 2. Scale the background up so there is room to move around */
+  background-size: 400% 400%;
+  
+  /* 3. Attach the custom keyframe animation */
+  animation: moveGradient 15s ease infinite;
+  
+  /* Ensure the element spans the area you want covered */
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 4. Define the motion path via background coordinates */
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Base Body Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fafafa;
+    padding: 24px 18px 40px;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal overflow/scrolling */
+}
+
+/* Mobile Container */
+.container {
+    max-width: 480px; /* Fits comfortably on mobile phones & centers on desktop */
+    margin: 0 auto;
+    width: 100%;
+    text-align: start;
+    overflow-wrap: break-word; /* Wraps long text or links automatically */
+}
+
+/* Key Image Responsiveness Rule */
+img {
+    max-width: 100%; /* Ensures images never extend beyond container width */
+    height: auto;     /* Preserves image aspect ratio */
+    display: block;
+    margin: 16px auto;
+    border-radius: 6px;
+}
+
+/* Underlay / Header Image Adjustment */
+.underlay img {
+    margin-top: 0;
+}
+
+/* Top Decorative Image Styling */
+.top-decorative-wrapper {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.top-decorative-img {
+    max-width: 80px; /* Adjust size for your top decorative image/badge */
+    height: auto;
+    margin: 0 auto 10px auto;
+    border-radius: 12px;
+}
+
+/* Typography Styling */
+h1 {
+    font-size: 1.55rem;
+    margin: 16px 0 12px;
+    line-height: 1.3;
+    color: #1a1a1a;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 22px 0 8px;
+    line-height: 1.3;
+    color: #2c2c2e;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    color: #3a3a3c;
+}
+
+.signoff {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+a {
+    color: #0073b1;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+/* Glassmorphism Card */
+.mainpoint {
+    padding: 20px;
+    margin: 18px 0;
+    /* 1. Semi-transparent background */
+    background: rgba(255, 255, 255, 0.35); 
+    
+    /* 2. Frosted blur effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* 3. Subtle light border */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    
+    /* 4. Rounded corners & shadow for depth */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+.mainpoint p {
+    margin-bottom: 12px;
+}
+
+.mainpoint p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   SLEEK & MODERN BUTTON STYLES FOR MOBILE
+   ========================================== */
+
+.cta-wrapper {
+    margin: 24px 0;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Base Button Style */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 22px;
+    border-radius: 14px;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-tap-highlight-color: transparent;
+    width: 100%; /* Spans full width on mobile for easy tapping */
+}
+
+/* Primary CTA Button (Google Form) */
+.btn-primary {
+    background-color: #232428;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 4px 10px -2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #000000;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.28);
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Secondary Buttons (Portfolio & LinkedIn) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #232428 !important;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    flex: 1; /* Sits side-by-side or wraps cleanly */
+    min-width: 140px;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Open-New-Tab Icon Styling */
+.external-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover .external-icon {
+    transform: translate(2px, -2px); /* Subtle nudge up & right on hover/tap */
+}
